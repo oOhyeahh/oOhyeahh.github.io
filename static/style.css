@@ -1,9 +1,14 @@
 body,html{
-    background-color: #D3CBB8;
+    background-color: #c19a6b;
+    background-image: url(https://www.transparenttextures.com/patterns/wood-pattern.png);
 }
 h2{
     text-align: center;
 }
 .card{
     background-color: #eef2f3;
+    box-shadow: 10px 10px 50px 0 rgba(0, 0, 0, 0.2), 0 100px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.progress-bar{
+    background-color:#6dd5ed;
 }
