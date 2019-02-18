@@ -1,5 +1,5 @@
 body,html{
-    background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
+    background-image: url('../background.jpg');
 }
 
 .container{
