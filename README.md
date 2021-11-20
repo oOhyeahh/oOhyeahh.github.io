@@ -32,4 +32,3 @@ git add .husky/pre-commit
 ```
 
 The hook would run everytime when you make a commit. Or you can force to ignore it by adding `no-verify` add the end of commit command.
-
