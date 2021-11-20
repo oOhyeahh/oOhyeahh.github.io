@@ -1,0 +1,26 @@
+{
+  "name": "oohyeahh.github.io",
+  "version": "1.0.0",
+  "description": "personal github website",
+  "main": "index.js",
+  "dependencies": {
+    "husky": "^7.0.4"
+  },
+  "devDependencies": {
+    "prettier": "2.4.1"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "prettier": "npx prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oOhyeahh/oOhyeahh.github.io.git"
+  },
+  "author": "Oliver Ye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oOhyeahh/oOhyeahh.github.io/issues"
+  },
+  "homepage": "https://github.com/oOhyeahh/oOhyeahh.github.io#readme"
+}
