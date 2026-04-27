@@ -1,0 +1,249 @@
+:root {
+  --bg: #f4f7ff;
+  --panel: #ffffff;
+  --panel-muted: #eef3ff;
+  --text: #172b4d;
+  --text-muted: #44546f;
+  --primary: #0052cc;
+  --primary-soft: #deebff;
+  --border: #c7d1e6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", sans-serif;
+  color: var(--text);
+  background: linear-gradient(160deg, #f4f7ff 0%, #e9f0ff 40%, #f7f9ff 100%);
+}
+
+a {
+  color: var(--primary);
+  text-underline-offset: 0.2em;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.layout {
+  width: min(1160px, 92vw);
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  padding: 3rem 0 2rem;
+}
+
+.profile-rail {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 16px 30px rgba(9, 30, 66, 0.08);
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0.7rem 0 0.6rem;
+  font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.4rem);
+  line-height: 1.15;
+}
+
+.headline {
+  margin: 0;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.location {
+  margin: 0.25rem 0 1rem;
+  color: var(--text-muted);
+}
+
+.intro {
+  margin: 0 0 1.5rem;
+  line-height: 1.6;
+}
+
+.section-nav ul,
+.social-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.section-nav {
+  margin-bottom: 1.5rem;
+}
+
+.section-nav a {
+  display: inline-block;
+  padding: 0.4rem 0;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.section-nav a:hover {
+  color: var(--primary);
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.social-links a {
+  display: inline-block;
+  background: var(--primary-soft);
+  border: 1px solid #b3d4ff;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.content-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.section-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.4rem;
+  box-shadow: 0 10px 24px rgba(9, 30, 66, 0.07);
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.paragraph-stack p {
+  margin: 0 0 0.8rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.paragraph-stack p:last-child {
+  margin-bottom: 0;
+}
+
+.timeline {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.timeline-card {
+  background: var(--panel-muted);
+  border: 1px solid #d4def0;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.timeline-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.timeline-period {
+  margin: 0 0 0.3rem;
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.highlights {
+  margin: 0.75rem 0 0;
+  color: var(--text-muted);
+  line-height: 1.5;
+  padding-left: 1.2rem;
+}
+
+.card-subtitle {
+  margin: 0.55rem 0;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding: 0;
+  margin: 0.8rem 0 0;
+}
+
+.tag-list li {
+  background: #deebff;
+  border: 1px solid #b3d4ff;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.85rem;
+  color: #0747a6;
+}
+
+.skills-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.skill-card {
+  background: var(--panel-muted);
+  border: 1px solid #d4def0;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.skill-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.footer {
+  padding: 0.2rem 0 1.4rem;
+  color: var(--text-muted);
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 340px 1fr;
+    align-items: start;
+  }
+
+  .profile-rail {
+    position: sticky;
+    top: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

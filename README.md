@@ -1,34 +1,42 @@
 # oOhyeahh.github.io
 
-My Github page
+Personal portfolio built with Next.js App Router and exported as a static site for GitHub Pages.
 
-## Set Up
+## Tech stack
 
-Prerequisite dependency
+- Next.js (static export)
+- React
+- TypeScript
 
-- [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-
-You can clone this repo using follow command
-
-```sh
-git clone https://github.com/oOhyeahh/oOhyeahh.github.io.git
-```
-
-## Code Formatting
-
-In order to maintain the code and commit in consistent format, we use [husky](https://github.com/typicode/husky) to run linting and code formating hooks. To set up husky in local development, using the following command
+## Local development
 
 ```sh
 npm install
-npm run prepare
-git add .husky/pre-commit
+npm run dev
 ```
 
-You can add hook to husky using the following command
+Open `http://localhost:3000`.
+
+## Build for production
 
 ```sh
-npx husky add .husky/pre-commit "<your npm command>"
-git add .husky/pre-commit
+npm run build
 ```
 
-The hook would run everytime when you make a commit. Or you can force to ignore it by adding `no-verify` add the end of commit command.
+This generates the static output in `out/`.
+
+## Deployment
+
+Deployment is automated using GitHub Actions through `.github/workflows/deploy-pages.yml`.
+
+1. In repository settings, enable GitHub Pages and set source to **GitHub Actions**.
+2. Push to `master`.
+3. The workflow builds the Next.js export and deploys `out/` to Pages.
+
+## Formatting hooks
+
+Husky + Prettier are configured for local commit hygiene:
+
+```sh
+npm run prepare
+```
