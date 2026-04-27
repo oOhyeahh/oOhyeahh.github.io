@@ -25,7 +25,7 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section id="experience" title="Experience">
+        <Section id="experience" title="Experience 💼">
           <div className="timeline">
             {experiences.map((experience) => (
               <ExperienceItem
